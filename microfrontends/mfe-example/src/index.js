@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import styles from './index.css';
 import App from './App';
 
 class MfeExample extends HTMLElement {
+  constructor() {
+    super()
+
+    this.attachShadow({ mode: 'open' });
+  }
+
   connectedCallback() {
     this.render()
   }
 
   render() {
-    const element = document.createElement('div')
+    const element = document.createElement('div');
+    const styleElement = document.createElement('style');
+
+    styleElement.innerHTML = styles.toString();
 
     const root = ReactDOM.createRoot(element);
 
@@ -19,7 +28,8 @@ class MfeExample extends HTMLElement {
       </React.StrictMode>
     );
 
-    this.appendChild(element)
+    this.shadowRoot.appendChild(styleElement);
+    this.shadowRoot.appendChild(element);
   }
 }
 
