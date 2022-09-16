@@ -1,0 +1,30 @@
+{
+    "microservices": [],
+    "microfrontends": [
+        {
+            "name": "mfe-example",
+            "customElement": "mfe-example",
+            "stack": "react",
+            "type": "app-builder",
+            "group": "free",
+            "publicFolder": "public",
+            "slot": "content",
+            "paths": ["/mfe-example"],
+            "nav": [
+                {
+                    "label": {
+                        "it": "MFE di esempio",
+                        "en": "MFE example"
+                    },
+                    "target": "internal",
+                    "url": "/mfe-example"
+                }
+            ]
+        }
+    ],
+    "svc": [],
+    "name": "demo-epc",
+    "version": "0.0.1",
+    "description": "demo-epc description",
+    "type": "bundle"
+}
