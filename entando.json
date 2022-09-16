@@ -1,4 +1,16 @@
 {
+    "global": {
+        "nav": [
+            {
+                "label": {
+                    "it": "Search",
+                    "en": "Search"
+                },
+                "target": "external",
+                "url": "https://www.google.com"
+            }
+        ]
+    },
     "microservices": [],
     "microfrontends": [
         {
@@ -24,7 +36,7 @@
     ],
     "svc": [],
     "name": "demo-epc",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "demo-epc description",
     "type": "bundle"
 }
