@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+import { Logo } from './Logo'
+
+function goBackHome() {
+  return window.entando.router.push('/dashboard')
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,6 +20,9 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={goBackHome} className="Button">
+          Go back to the dashboard
+        </button>
       </header>
     </div>
   );
