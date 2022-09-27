@@ -1,4 +1,4 @@
-import { Logo } from './Logo'
+import logo from "./logo.svg"
 
 function goBackHome() {
   return window.entando.router.push('/dashboard')
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Logo />
+        <img src={logo} alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
