@@ -14,29 +14,52 @@
     "microservices": [],
     "microfrontends": [
         {
-            "name": "mfe-example",
-            "customElement": "mfe-example",
+            "name": "react-mfe-example",
+            "customElement": "react-mfe-example",
             "stack": "react",
             "type": "app-builder",
             "group": "free",
             "publicFolder": "public",
             "slot": "content",
-            "paths": ["/mfe-example"],
+            "paths": [
+                "/react-mfe-example"
+            ],
             "nav": [
                 {
                     "label": {
-                        "it": "MFE di esempio",
-                        "en": "MFE example"
+                        "it": "MFE di esempio React",
+                        "en": "MFE example React"
                     },
                     "target": "internal",
-                    "url": "/mfe-example"
+                    "url": "/react-mfe-example"
+                }
+            ]
+        },
+        {
+            "name": "svelte-mfe-example",
+            "customElement": "svelte-mfe-example",
+            "stack": "react",
+            "type": "app-builder",
+            "group": "free",
+            "paths": [
+                "/mfe-svelte-example"
+            ],
+            "slot": "content",
+            "nav": [
+                {
+                    "label": {
+                        "it": "MFE di esempio con Svelte",
+                        "en": "MFE with Svelte"
+                    },
+                    "target": "internal",
+                    "url": "/mfe-svelte-example"
                 }
             ]
         }
     ],
     "svc": [],
     "name": "demo-epc",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "demo-epc description",
     "type": "bundle"
 }
