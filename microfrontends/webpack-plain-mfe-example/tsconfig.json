@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "ES6",
+    "target": "ES6",
+    "allowJs": true,
+    "strict": true,
+    "jsx": "react"
+  },
+  "files": ["src/main.ts"]
+}

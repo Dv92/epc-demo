@@ -55,6 +55,18 @@
                     "url": "/mfe-svelte-example"
                 }
             ]
+        },
+        {
+            "name": "webpack-plain-mfe-example",
+            "customElement": "webpack-plain-mfe-example",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "webpack-plain-mfe-example",
+                "it": "webpack-plain-mfe-example"
+            }
         }
     ],
     "svc": [],
