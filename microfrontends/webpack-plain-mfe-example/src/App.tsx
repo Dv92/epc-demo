@@ -1,14 +1,21 @@
 import React from 'react'
 
 export function App() {
-  return (
-    <div className='app'>
-      <h1 className='app__title'>
-        Hello from Wepack plain MFE example
-      </h1>
-      <p className='app__description'>
-        This is a simple MFE for demostration of the capabilities of an EPC MFE
-      </p>
-    </div>
+    const handleClick = () => {
+      alert('hello!')
+    }
+
+    return (
+      <div className='app'>
+        <h1 className='app__title'>
+          Webpack Plain Mfe
+        </h1>
+        <p className='app__description'>
+          Boilerplate example for build MFE inside Entando
+        </p>
+        <button onClick={handleClick}>
+          Say Hello
+        </button>
+      </div>
   )
 }

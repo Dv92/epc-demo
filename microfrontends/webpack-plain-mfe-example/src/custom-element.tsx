@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // @ts-ignore
-import * as styles from 'index.css';
+import styles from "./index.css";
 import { App } from './App';
+
+type StyleLoader = {
+  use: (options: { target: HTMLElement }) => { target: HTMLElement }
+}
+
+const loader: StyleLoader = styles
 
 class WebpackPlainMfeExample extends HTMLElement {
   #rootID: string = 'mfe-root'
-  #styleID: string = 'mfe-style'
-  #appInstance: ReactDOM.Root | null = null
-  shadowRoot: ShadowRoot
+  #appInstance: any = null
+  shadowRoot: any
 
   constructor() {
     super();
@@ -27,22 +32,14 @@ class WebpackPlainMfeExample extends HTMLElement {
       this.shadowRoot.removeChild(currentElement);
     }
 
-    const currentStyleElement = this.shadowRoot.getElementById(this.#styleID);
-
-    if (currentStyleElement) {
-      this.shadowRoot.removeChild(currentStyleElement);
-    }
-
     this.#appInstance?.unmount();
   }
 
   render() {
+    loader.use({ target: this.shadowRoot })
+
     const element = document.createElement('div');
-    const styleElement = document.createElement('style');
 
-    styleElement.innerHTML = styles.toString();
-
-    styleElement.id = this.#styleID;
     element.id = this.#rootID;
 
     this.cleanTree();
@@ -55,7 +52,6 @@ class WebpackPlainMfeExample extends HTMLElement {
       </React.StrictMode>
     );
 
-    this.shadowRoot.appendChild(styleElement);
     this.shadowRoot.appendChild(element);
   }
 }

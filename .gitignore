@@ -20,6 +20,7 @@
 *.iws
 *.iml
 *.ipr
+.fleet
 
 ######################
 # Keycloak DB files
