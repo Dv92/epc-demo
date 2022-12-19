@@ -59,7 +59,7 @@
     ],
     "svc": [],
     "name": "demo-epc",
-    "version": "0.0.7",
+    "version": "0.0.10",
     "description": "demo-epc description",
     "type": "bundle"
 }
